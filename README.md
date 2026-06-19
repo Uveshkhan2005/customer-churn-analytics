@@ -2,114 +2,249 @@
 
 ## Project Overview
 
-Customer Churn Analytics is a data analytics project focused on understanding customer behavior and identifying the key factors that contribute to customer churn.
+Customer Churn Analytics is an end-to-end Data Analytics project focused on understanding customer behavior and identifying the factors that contribute to customer churn.
 
-The objective of this project is to analyze customer demographics, service usage patterns, contract details, and billing information to discover insights that can help improve customer retention.
+The project analyzes customer demographics, service subscriptions, contract information, billing patterns, and customer tenure to uncover actionable business insights that can improve customer retention and reduce revenue loss.
 
 ---
 
 ## Business Problem
 
-Customer churn is one of the biggest challenges faced by subscription-based businesses. Losing existing customers can significantly impact revenue and growth.
+Customer churn is one of the most critical challenges for subscription-based businesses. Acquiring a new customer is often more expensive than retaining an existing one.
 
-This project aims to answer questions such as:
+This project aims to answer key business questions:
 
-- What percentage of customers churn?
-- Which customer segments are most likely to churn?
-- How do contract types affect customer retention?
-- Does internet service type influence churn?
-- Which billing and payment methods are associated with higher churn rates?
+* What percentage of customers churn?
+* Which customer groups are most likely to leave?
+* How does customer tenure affect churn?
+* Which contract types have the highest retention rates?
+* Does internet service type impact churn?
+* Which payment methods are associated with higher churn rates?
+* What business actions can reduce churn?
 
 ---
 
 ## Dataset Information
 
-Dataset: Telco Customer Churn Dataset
+**Dataset:** Telco Customer Churn Dataset
 
-Records: 7,043 Customers
+**Source:** IBM Sample Data
 
-Features: 21 Variables
+**Records:** 7,043 Customers
 
-Target Variable:
-- Churn (Yes / No)
+**Features:** 21 Variables
+
+**Target Variable:** Churn (Yes / No)
+
+### Key Columns
+
+* Customer Demographics
+
+  * Gender
+  * Senior Citizen
+  * Partner
+  * Dependents
+
+* Customer Services
+
+  * Phone Service
+  * Internet Service
+  * Online Security
+  * Tech Support
+  * Streaming TV
+  * Streaming Movies
+
+* Account Information
+
+  * Contract Type
+  * Payment Method
+  * Monthly Charges
+  * Total Charges
+  * Tenure
 
 ---
 
 ## Tools & Technologies
 
-- Python
-- Pandas
-- NumPy
-- Matplotlib
-- SQL
-- Excel
-- Power BI
-- Jupyter Notebook
+### Programming
+
+* Python
+* SQL
+
+### Python Libraries
+
+* Pandas
+* NumPy
+* Matplotlib
+
+### Analytics & Visualization
+
+* Excel
+* Power BI
+* Jupyter Notebook
+
+### Version Control
+
+* Git
+* GitHub
 
 ---
 
 ## Project Workflow
 
-### Phase 1: Data Exploration
-- Dataset loading
-- Data inspection
-- Data type analysis
-- Churn distribution analysis
+### Phase 1: Data Exploration ✅
 
-### Phase 2: Data Cleaning
-- Missing value detection
-- Hidden missing value identification
-- Data type corrections
+* Dataset Loading
+* Shape Analysis
+* Data Type Inspection
+* Descriptive Statistics
+* Churn Distribution Analysis
 
-### Phase 3: Exploratory Data Analysis
-- Churn by Gender
-- Churn by Senior Citizen Status
-- Churn by Contract Type
-- Churn by Internet Service
-- Churn by Payment Method
-- Customer Tenure Analysis
+### Phase 2: Data Cleaning ✅
 
-### Phase 4: Visualization
-- Business-focused visualizations
-- Customer retention insights
-- Churn trend analysis
+* Missing Value Detection
+* Hidden Missing Value Identification
+* TotalCharges Data Type Correction
+* Removal of Invalid Records
+* Dataset Quality Assessment
 
-### Phase 5: Dashboard Development
-- Power BI Dashboard
-- KPI Tracking
-- Executive Summary
+### Phase 3: Exploratory Data Analysis (In Progress)
+
+* Churn by Gender
+* Churn by Senior Citizen Status
+* Churn by Contract Type
+* Churn by Internet Service
+* Churn by Payment Method
+* Customer Tenure Analysis
+
+### Phase 4: Data Visualization
+
+* Customer Churn Dashboard
+* Business Insight Charts
+* KPI Analysis
+
+### Phase 5: Power BI Dashboard
+
+* Executive Summary Dashboard
+* Churn Monitoring Dashboard
+* Customer Segmentation Dashboard
+
+---
+
+## Data Cleaning Findings
+
+During the data quality assessment:
+
+* No explicit null values were found.
+* The TotalCharges column was stored as an object data type.
+* 11 records contained blank TotalCharges values.
+* These records belonged to customers with zero tenure.
+* Invalid records were removed.
+* TotalCharges was successfully converted to numeric format.
+
+### Dataset After Cleaning
+
+* Original Records: 7,043
+* Removed Records: 11
+* Final Records: 7,032
 
 ---
 
 ## Current Progress
 
-- [x] Repository Setup
-- [x] Dataset Upload
-- [x] Initial Data Exploration
-- [x] Churn Distribution Analysis
-- [x] Data Quality Assessment
-- [ ] Data Cleaning
-- [ ] Exploratory Data Analysis
-- [ ] Dashboard Development
+### Repository Setup
+
+* [x] GitHub Repository Created
+* [x] Dataset Uploaded
+
+### Data Exploration
+
+* [x] Dataset Inspection
+* [x] Data Summary
+* [x] Churn Distribution Analysis
+
+### Data Cleaning
+
+* [x] Missing Value Analysis
+* [x] Hidden Missing Value Detection
+* [x] TotalCharges Conversion
+* [x] Data Quality Assessment
+
+### Exploratory Data Analysis
+
+* [ ] Churn by Gender
+* [ ] Churn by Contract Type
+* [ ] Churn by Internet Service
+* [ ] Churn by Payment Method
+* [ ] Tenure Analysis
+
+### Dashboard Development
+
+* [ ] Power BI Dashboard
+* [ ] KPI Cards
+* [ ] Executive Summary
 
 ---
 
-## Key Initial Finding
+## Key Initial Findings
 
-Out of 7,043 customers:
+### Churn Distribution
 
-- Retained Customers: 5,174
-- Churned Customers: 1,869
-- Churn Rate: 26.54%
+| Metric             | Value  |
+| ------------------ | ------ |
+| Total Customers    | 7,043  |
+| Retained Customers | 5,174  |
+| Churned Customers  | 1,869  |
+| Churn Rate         | 26.54% |
 
-This indicates that approximately 1 in 4 customers have left the service, making customer retention a critical business challenge.
+### Business Insight
+
+Approximately **1 out of every 4 customers** has churned, indicating a significant customer retention challenge and highlighting the need for deeper analysis into customer behavior and service usage patterns.
+
+---
+
+## Repository Structure
+
+customer-churn-analytics/
+
+├── dataset/
+
+├── notebooks/
+
+├── sql/
+
+├── visuals/
+
+├── powerbi/
+
+├── report/
+
+└── README.md
+
+---
+
+## Upcoming Analysis
+
+The next phase of the project will focus on identifying customer segments with the highest churn rates and discovering the strongest predictors of customer attrition.
 
 ---
 
 ## Author
 
-**Uveshkhan Lohani**
+### Uveshkhan Lohani
 
-Aspiring Data Analyst | BE Information Technology Graduate
+BE Information Technology Graduate
 
-Currently building end-to-end Data Analytics projects using Python, SQL, Excel, and Power BI.
+Aspiring Data Analyst
+
+Skills:
+
+* Python
+* SQL
+* Excel
+* Power BI
+* Pandas
+* NumPy
+* Data Visualization
+
+Currently building end-to-end Data Analytics projects and sharing them on GitHub.
